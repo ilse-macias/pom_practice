@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pom_practice" />
         <module name="mastertask" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mastertask" target="8" />
+      <module name="pom_practice" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
