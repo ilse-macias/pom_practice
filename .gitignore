@@ -50,6 +50,7 @@ x64/
 *.scc
 
 # OS generated files #
+.DS_Store
 .DS_Store*
 Icon?
 
@@ -68,3 +69,5 @@ ipch/
 
 # Visual Studio temp something
 .vs/
+
+target/
