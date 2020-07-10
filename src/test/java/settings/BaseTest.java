@@ -14,6 +14,7 @@ abstract public class BaseTest {
     public void suitSetup(){
         this.driver = new DriverSetup("Chrome", false).getDriver();
         this.driver.get("https://store.steampowered.com/");
+        this.driver.manage().window().maximize();
     }
 
     @AfterSuite

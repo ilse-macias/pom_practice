@@ -16,6 +16,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//li[.='Best Sellers']")
     private WebElement bestSellerProductsButton;
 
+    @FindBy (xpath = "//*[@id='store_search_link']/img") 
+    private WebElement searchIcon;
+
     public HomePage(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver, this);
@@ -33,6 +36,8 @@ public class HomePage extends BasePage{
         Assert.assertEquals(is_active,"active");
     }
 
-
+    public void clickOnMagnifyingGlassIcon(){
+        this.click(searchIcon);
+    }
 }
 
