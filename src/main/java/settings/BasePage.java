@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 abstract public class BasePage {
@@ -41,6 +42,5 @@ abstract public class BasePage {
         this.waitForElementToAppear(element);
         actions.moveToElement(element).perform();
     }
-
 }
 

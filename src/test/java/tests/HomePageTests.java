@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
 import pages.HomePage;
+import pages.Portal2Page;
+import pages.SearchGameListPage;
 import settings.BaseTest;
 import components.NavBar;
 
@@ -14,11 +16,15 @@ public class HomePageTests extends BaseTest {
 
     private NavBar navBar;
     private HomePage homePage;
+    private SearchGameListPage searchGame;
+    private Portal2Page portal2;
 
     @BeforeTest
     public void setUp(){
         navBar = new NavBar(this.driver);
         homePage = new HomePage(this.driver);
+        searchGame = new SearchGameListPage(this.driver);
+        portal2 = new Portal2Page(this.driver);
     }
 
     @Test
@@ -28,7 +34,7 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
-    public void testSuggestedGames(){
+    public void testSuggestedGames() throws InterruptedException {
         String game_name = "Portal";
         navBar.writeGameIntoSearchInput(game_name);
 
@@ -39,6 +45,8 @@ public class HomePageTests extends BaseTest {
         }
 
         homePage.clickOnMagnifyingGlassIcon();
+        searchGame.clickOnTheGameDesired();
+        portal2.ValidateTheGame();
     }
 
 }
